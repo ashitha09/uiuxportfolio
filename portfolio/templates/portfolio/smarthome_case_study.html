@@ -1,0 +1,386 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VitalCare: Designing a Patient-Centered Mobile Medical App</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+      color: #222;
+    }
+    header {
+      background-color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    header img.logo {
+      height: 40px;
+      cursor: pointer;
+    }
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    h2 {
+      font-size: 22px;
+      margin-top: 2rem;
+      color: #444;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .section:last-child {
+      margin-bottom: 0;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .subhead {
+      font-style: italic;
+      color: #777;
+      margin-bottom: 1rem;
+    }
+    .competitor-box {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.competitor {
+  flex: 1;
+  padding: 20px;
+  background: #fafafa;
+}
+
+.competitor:not(:last-child) {
+  border-right: 1px solid #ddd; /* vertical line between columns */
+}
+
+.competitor h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.competitor ul {
+  margin: 0 0 15px 20px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <a href="{% url 'home' %}">
+      <img src="{% static 'images/logo.png' %}" alt="Logo" style="height: 50px;">
+    </a>
+    <div class="nav-links">
+      <a href="{% url 'about' %}">About Me</a>
+      <a href="/projects/">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.linkedin.com/in/ashithaninganagouda/" target="_blank">in</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>VitalCare: Designing a Patient-Centered Mobile Medical Appr</h1>
+    
+
+    <div class="section">
+      <h2>Project Overview</h2>
+      <p>
+        VitalCare is a patient-focused mobile app that makes booking care, viewing medical records, tracking vitals, and communicating with clinicians simple and reassuring. The app emphasizes clarity, speed, and trust — delivering essential health tasks with a calm, accessible UI so users of all ages can manage appointments, prescriptions, and test results without confusion. 
+      </p>
+      <p>
+        The vision was to craft a lifestyle-enhancing platform that merges aesthetic simplicity with robust functionality. Through a calming interface and personalized dashboards, users can manage their home environment intuitively and securely.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Timeframe</h2>
+      <p>4 Weeks</p>
+
+      <h2>My Role</h2>
+      <p>UX Research, UI Design, Prototyping, Information Architecture, Visual Design, Usability Testing</p>
+
+      <h2>Tools</h2>
+      <p>Figma, Notion, Zoom, Illustrator</p>
+    </div>
+
+    <div class="section">
+      <h2>The Challenge</h2>
+      <ul>
+        <li>Make booking and clinician access frictionless</li>
+        <li>Present lab results and prescriptions clearly (no jargon)</li>
+        <li>Smooth login & signup flow</li>
+        <li>Provide a simple vitals-tracking dashboard</li>
+        <li>Ensure privacy and trust signals are visible at key touchpoints</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Objectives</h2>
+      <ul>
+        <li>Create a calm, legible mobile interface for patients aged 18–65+</li>
+        <li>DReduce appointment booking time to less than 3 taps from home screen</li>
+        <li>Surface critical items (upcoming appointment, unread test results, medication reminders) on the home dashboard</li>
+        <li>Design interactions that are accessible (large tap targets, readable typography, clear error states)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Research & Strategy</h2>
+      <h3>User Persona Highlights</h3>
+      <ul>
+        <li>Primary Users: Women aged 20–45 looking for elegant, ethical, and everyday jewelry</li>
+        <li>Needs: Simplicity, clarity, mobile-friendly shopping, trust in product quality and sourcing</li>
+        <li>Pain Points: Overly cluttered interfaces, lack of information about materials, poor mobile UX</li>
+      </ul>
+      <div style="display: flex; gap: 20px; margin-top: 1rem;">
+        <div style="flex: 1; text-align: center;">
+          <img src="{% static 'images/health_1.png' %}" alt="Persona 1" style="max-width:100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <p><strong>Persona 1</strong> </p>
+        </div>
+        <div style="flex: 1; text-align: center;">
+          <img src="{% static 'images/health_2.png' %}" alt="Persona 2" style="max-width:100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <p><strong>Persona 2</strong> </p>
+        </div>
+      </div>
+
+      <h3>Competitor Inspiration</h3>
+      <div class="competitor-box">
+        <!-- MyChart -->
+    <div class="competitor">
+      <h2>MyChart</h2>
+      <h3>Strengths</h3>
+      <ul>
+        <li>Widely adopted in hospitals/clinics</li>
+        <li>Comprehensive medical record management</li>
+        <li>Strong security compliance</li>
+      </ul>
+      <h3>Weaknesses</h3>
+      <ul>
+        <li>Overly clinical and cluttered interface</li>
+        <li>Steep learning curve for older patients</li>
+        <li>Limited personalization</li>
+      </ul>
+      <h3>Features</h3>
+      <ul>
+        <li>Appointment booking</li>
+        <li>Lab results access</li>
+        <li>Prescription renewals</li>
+        <li>Secure messaging with providers</li>
+        <li>Insurance/billing integration</li>
+      </ul>
+    </div>
+
+    <!-- Babylon Health -->
+    <div class="competitor">
+      <h2>Babylon Health</h2>
+      <h3>Strengths</h3>
+      <ul>
+        <li>AI-driven symptom checker</li>
+        <li>Strong teleconsultation features</li>
+        <li>Preventive health insights</li>
+      </ul>
+      <h3>Weaknesses</h3>
+      <ul>
+        <li>Less focus on long-term records management</li>
+        <li>Heavy reliance on AI accuracy</li>
+        <li>Limited integration with local hospitals</li>
+      </ul>
+      <h3>Features</h3>
+      <ul>
+        <li>AI-based symptom checker</li>
+        <li>Video consultations</li>
+        <li>Appointment booking</li>
+        <li>Digital health records (partial)</li>
+        <li>Health monitoring suggestions</li>
+      </ul>
+    </div>
+
+    <!-- Teladoc -->
+    <div class="competitor">
+      <h2>Teladoc</h2>
+      <h3>Strengths</h3>
+      <ul>
+        <li>Strong telemedicine network globally</li>
+        <li>Chronic condition management programs</li>
+        <li>Good accessibility for different user groups</li>
+      </ul>
+      <h3>Weaknesses</h3>
+      <ul>
+        <li>Limited personalization in UX design</li>
+        <li>Less emphasis on vitals dashboards</li>
+        <li>More focused on provider access than user experience</li>
+      </ul>
+      <h3>Features</h3>
+      <ul>
+        <li>Video/phone teleconsultation</li>
+        <li>Appointment scheduling</li>
+        <li>Prescription renewals</li>
+        <li>Specialist access</li>
+        <li>Chronic care management tools</li>
+      </ul>
+    </div>
+      </div>
+
+      <h3>Key Insights</h3>
+      <ul>
+        <li>Users want a single home snapshot (next appointment + urgent alerts).</li>
+        <li>Visualizing results with contextual plain-language summaries reduces anxiety.</li>
+        <li>Appointment booking must show available slots and clinician specialties quickly.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>UX Architecture</h2>
+      <h3>Sitemap</h3>
+      <ul>
+        <li>Home (dashboard)</li>
+        <li>Book Appointment</li>
+        <li>Doctors / Clinics</li>
+        <li>Appointments (list)</li>
+        <li>Records (Lab results, Imaging, Vitals)</li>
+        <li>Prescriptions</li>
+        <li>Messages (chat / teleconsult)</li>
+        <li>Settings & Privacy</li>
+      </ul>
+
+      <h3>User Flow</h3>
+      <div style="text-align:center; margin: 1.5rem 0;">
+        <img src="{% static 'images/vitalspace_flow.png' %}" 
+             alt="Lo-Fi Wireframe" 
+             style="max-width:100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <p class="subhead">User Flow</p>
+      </div>
+    
+    </div>
+
+    <div class="section">
+      <h2>Wireframes</h2>
+      <p>Lo-fi sketches prioritized clarity in navigation for appointments, prescriptions, and search. In the hi-fi stage, we applied a calm color palette, medical iconography, and accessible layouts to ensure trust and ease of use for patients across age groups.</p>
+      <div style="text-align:center; margin: 1.5rem 0;">
+        <img src="{% static 'images/vitalcare-lofi.png' %}" 
+             alt="Lo-Fi Wireframe" 
+             style="max-width:100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        <p class="subhead">Lo-Fi Wireframe of VitalCare booking flow</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Branding & Visual Design</h2>
+      <ul>
+        <li>Soft blues + muted greens (trust + calm) with high-contrast call-to-action accents for CTAs.</li>
+        <li>Typography: Large, humanist sans for body copy (readability), slightly heavier weight for key numbers (BP, glucose).</li>
+        <li>Iconography: Simple line icons for actions (book, results, chat).</li>
+        <li>Imagery / Tone: Warm, friendly photography for empty states and onboarding; neutral medical illustrations for educational content.
+
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>High-Fidelity Screens</h2>
+      <ul>
+        <li><strong>Home:</strong> Hero banner, Lookbook, Gift Guide, Lifestyle shots</li>
+        <li><strong>Discover:</strong> Brand story, materials section</li>
+        <li><strong>Products:</strong> Grid with filters and sorting</li>
+        <li><strong>Contact:</strong> Form, social links, optional map</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Usability Testing</h2>
+      <p><strong>Methodology:</strong> Remote usability testing with 6 participants (ages 21–65, including 2 with chronic conditions) using a Figma prototype and Zoom observation. Tasks focused on frequent patient activities such as booking care, tracking vitals, and reviewing reminders.</p>
+      
+      <h3>Test Scenarios</h3>
+      <ul>
+        <li>Complete sign-up and log in</li>
+        <li>Book an appointment with a clinician from the home dashboard</li>
+        <li>Review upcoming appointments and reminders</li>
+        <li>Send a secure message to a doctor</li>
+      </ul>
+    
+      <h3>Key Findings</h3>
+      <ul>
+        <li><strong>Task Completion:</strong> All participants successfully completed the core tasks.</li>
+        <li><strong>Appointment Booking:</strong> Average booking flow took fewer than 3 taps from the home screen.</li>
+        <li><strong>Dashboard:</strong> Participants valued seeing critical items (next appointment + reminders) immediately.</li>
+        <li><strong>Vitals Tracking:</strong> Card-based entry was intuitive; several users asked for long-term visualization of progress.</li>
+        <li><strong>Accessibility:</strong> Older participants requested larger tap targets and clearer error states during sign-up.</li>
+      </ul>
+    
+      <h3>User Feedback</h3>
+      <blockquote>“Booking was so much faster than my current hospital app.”</blockquote>
+      <blockquote>“I liked how I could see my upcoming appointment as soon as I opened the app.”</blockquote>
+      <blockquote>“The vitals tracker was simple — I’d love to see trends over weeks.”</blockquote>
+    </div>
+    
+
+    <div class="section">
+      <h2>Iterations</h2>
+      <ul>
+        <li>Increased calendar tap size and contrast for better accessibility.</li>
+        <li>Added short contextual tooltips on lab results explaining clinical ranges.</li>
+        <li>Reordered Home quick-actions so “Book” and “Messages” are first for faster access.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Experience the Prototype</h2>
+      <video controls 
+             style="max-width:600px; max-height:350px; width:100%; height:auto; border-radius: 8px; margin: 0 auto 1rem; display:block; object-fit:contain;">
+        <source src="{% static 'videos/vitalcare.mov' %}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div style="text-align: center; margin-top: 1rem;">
+        <a href="https://www.figma.com/proto/fJyuZCwLS1HZAqnwBnyqX1/Untitled?node-id=0-1&p=f&t=JLqyksYQeO1E2ZMQ-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=177%3A5870&show-proto-sidebar=1" 
+           target="_blank"
+           style="display: inline-block; padding: 12px 24px; background-color: #ffcc00; color: #333; font-weight: bold; border-radius: 6px; text-decoration: none; transition: background-color 0.3s;">
+          View Figma Prototype
+        </a>
+    </div>
+    
+
+    <div class="section">
+      <h2>Future Enhancements</h2>
+      <ul>
+        <li>Family accounts and caregiver switching for shared caretaking.</li>
+        <li>Smart reminders: refill automation based on prescription dates.</li>
+        <li>Integration with wearables for automatic vitals sync.</li>
+        <li>Multi-language support and deeper accessibility audits (WCAG compliance).</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Ashitha Ninganagouda | All rights reserved.
+  </footer>
+</body>
+</html>

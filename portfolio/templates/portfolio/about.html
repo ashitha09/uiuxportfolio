@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Ashitha – UI/UX Designer</title>
+  <style>
+    /* --- Nav styling like homepage --- */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #f6f6f6;
+      color: #111;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: white;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+      margin-bottom: 40px;
+    }
+    nav .logo {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    /* --- About section styling --- */
+    .about-container {
+      max-width: 1000px;
+      margin: 0 auto 80px;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0 20px;
+    }
+    .about-text {
+      flex: 1;
+      min-width: 280px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .about-text ul {
+      margin-top: 0;
+      padding-left: 20px;
+    }
+    .about-image {
+      flex: 1;
+      min-width: 280px;
+      text-align: center;
+    }
+    .about-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* --- Footer styling --- */
+    footer {
+      border-top: 1px solid #ccc;
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+      background: #f6f6f6;
+      font-family: 'Helvetica Neue', sans-serif;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="{% url 'home' %}">
+      <img src="{% static 'images/logo.png' %}" alt="Logo" style="height: 50px;">
+    </a>
+    <div class="nav-links">
+      <a href="{% url 'about' %}">About Me</a>
+      <a href="/projects/">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="https://www.linkedin.com/in/ashithaninganagouda/" target="_blank">in</a>
+    </div>
+  </nav>
+
+  <section class="about-container">
+    <div class="about-text">
+      <p>Hi! I'm Ashitha, a UI/UX designer and web developer with a background in Computer Science and a deep passion for creating meaningful, intuitive digital experiences.</p>
+      <p>My design journey began through coding — but I quickly discovered that what excited me most was not just how things work, but how people feel when they use them. Today, I combine logical problem-solving with creative thinking to craft user interfaces that are not only beautiful but purposeful.</p>
+      <p>I specialize in:</p>
+      <ul>
+        <li>Designing minimal and modern web experiences</li>
+        <li>Building interactive prototypes in Figma</li>
+        <li>Developing responsive websites using HTML, CSS, JavaScript, and Django</li>
+        <li>Applying user-centered design principles backed by research and empathy</li>
+      </ul>
+      <p>Whether it's designing a brand-new product or refining an existing one, I focus on clarity, usability, and visual storytelling. I'm also continuously learning — currently diving deeper into accessibility and motion design.</p>
+      <p>Let’s create something thoughtful and impactful together.</p>
+    </div>
+
+
+  </section>
+
+  <footer>
+    © 2025 Ashitha Hiregoudra | Get In Touch
+    <a href="mailto:ashithaninganagouda09@gmail.com" style="color: #555; text-decoration: none;">ashithaninganagouda09@gmail.com</a>
+  </footer>
+
+</body>
+</html>
